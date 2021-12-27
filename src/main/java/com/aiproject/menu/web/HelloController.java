@@ -21,7 +21,4 @@ public class HelloController {
         return "당신이 입력한 데이터는 ?"+data;
 
     }
-
-
-
 }
