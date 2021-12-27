@@ -1,7 +1,9 @@
 package com.aiproject.menu.web;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class IndexController {
@@ -20,4 +22,10 @@ public class IndexController {
    public String input() {
        return "input";
    }
+
+   @GetMapping("/menu")
+    public String menu(Model model){
+        model.addAttribute("menuname", "고기");
+        return "menu";
+    }
 }
